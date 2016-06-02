@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>301 Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
+    <link rel="stylesheet" href="css/style.css" charset="utf-8">
   </head>
   <body>
     <header>
@@ -19,32 +20,37 @@
       </ul>
    </nav>
     <main>
-      <section>
-        <section>
-          <img src="" alt="" />
-          <h3>Project 1: Cost of Living Index</h3>
-          <p></p>
-        </section>
-        <section>
+      <section id='articles'>
+        <article class='template' data-category=''>
+          <header>
+            <h1>Title</h1>
+            <div class="">
+              By <address><a href=''>Author Name</a></address>
+              published <time pubdate datetime="2016-06-01">Insert Published Time</time>
+            </div>
+          </header>
+          <section class='article-body'></section>
+        </article>
+        <!-- <section class='content'>
           <img src="" alt="" />
           <h3>Project 2: Marketing Analysis App</h3>
           <p></p>
         </section>
-        <section>
+        <section class='content'>
           <img src="" alt="" />
           <h3>Project 3: TBD</h3>
           <p></p>
         </section>
-        <section>
+        <section class='content'>
           <img src="" alt="" />
           <h3>Project 4: TBD</h3>
           <p></p>
         </section>
-        <section>
+        <section class='content'>
           <img src="" alt="" />
           <h3>Project 5: TBD</h3>
           <p></p>
-        </section>
+        </section> -->
       </section>
     </main>
     <footer>
@@ -55,5 +61,6 @@
         <a class='footer_icon' href="https://www.facebook.com/patrick.lapaige.5"><img class='footer_icon' src="img/facebook-icon.png" alt="facebook" /></a>
       </section>
     </footer>
+
   </body>
 </html>
