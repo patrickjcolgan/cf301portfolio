@@ -10,17 +10,14 @@ function Article(options) {
 };
 
 Article.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
+  var $newArticle = $('.template').clone();
 
   $newArticle.attr('data-category', this.category);
-  $newArticle.find('byline').html(this.author);
-  //skip authorURL because it's all the same person
-  //TODO: ADD IMAGE in Article function and HTML?
+  $newArticle.find('byline a').html(this.author);
   $newArticle.find('h1').html(this.title);
   $newArticle.find('article-body').html(this.body);
-
   //Publication date to show on hover
-  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
+  $newArticle.find('time[pubdate]').attr('datatime', this.publishedOn);
   //Display date as relative number of 'days ago'
   $newArticle.find('time').html('about' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + 'days ago');
 
@@ -28,7 +25,6 @@ Article.prototype.toHtml = function() {
 
   $newArticle.removeClass('template');
   return $newArticle;
-  console.log('complete');
 };
 
 articleData.sort(function(a,b) {
@@ -40,5 +36,5 @@ articleData.forEach(function(element) {
 });
 
 articles.forEach(function(a) {
-  $('#articles').append(a.toHtml())
+  $('#articles').append(a.toHtml());
 });
