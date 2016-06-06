@@ -28,7 +28,19 @@ articleView.manageCategoryFilter = function() {
   });
 };
 
+articleView.manageMainNav = function() {
+  $('.top-nav').on('click','.tab:eq(0)', function(){
+    $('#articles').fadeIn(1000);
+    $('#about').hide();
+  });
+  $('.top-nav').on('click','.tab:eq(1)', function(){
+    $('#about').fadeIn(1000);
+    $('#articles').hide();
+  });
+
+  $('.top-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
+};
+
 articleView.populateFilters();
-console.log('articleView.populateFilters');
 articleView.manageCategoryFilter();
-console.log('articleView.manageCategoryFilter');
+articleView.manageMainNav();
