@@ -20,16 +20,28 @@
       </ul>
    </nav>
     <main>
+      <section id="dropDown" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
       <section id='articles'>
         <article class='template' data-category='test'>
           <header>
             <h1>Title</h1>
             <div class="byline">
               By <address><a href=''>Author Name</a></address>
+              <!-- <span data-group='category'>Category</span> -->
               published <time pubdate datetime="2016-06-01">Insert Published Time</time>
             </div>
           </header>
           <section class='article-body'></section>
+          <button href="#" class="more"type="button" name="button">More</button>
         </article>
       </section>
     </main>
@@ -43,5 +55,6 @@
     </footer>
     <script type="text/javascript" src="js/blogArticles.js"></script>
     <script type="text/javascript" src="js/article.js"></script>
+    <script type="text/javascript" src="js/articleView.js"></script>
   </body>
 </html>

@@ -13,7 +13,7 @@ Article.prototype.toHtml = function() {
   var $newArticle = $('.template').clone();
 
   $newArticle.attr('data-category', this.category);
-  $newArticle.find('byline a').html(this.author);
+  $newArticle.find('.byline a').html(this.author);
   $newArticle.find('h1').html(this.title);
   $newArticle.find('article-body').html(this.body);
   //Publication date to show on hover
