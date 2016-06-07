@@ -18,6 +18,17 @@ img {
   width: 100%;
 }
 
+a:link, :visited {
+  text-decoration: none;
+  color: #0D1602;
+}
+
+/*a:visited {
+  color: blue;
+}*/
+a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
 .footer_icon {
   max-width: 32px;
   max-height: 32px;

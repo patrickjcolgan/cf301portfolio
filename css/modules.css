@@ -12,16 +12,9 @@
   float: right;
 }
 
-/*.top-nav li {
-  /*display: inline;
-  padding: 0;
-  list-style: none;
-  clear: both;
-}*/
-
-/*.top-nav {
+.top-nav {
   padding: 0.1em;
-}*/
+}
 
 .top-nav ul {
   padding: 0;
