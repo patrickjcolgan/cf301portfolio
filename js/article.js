@@ -15,7 +15,7 @@ Article.prototype.toHtml = function() {
   $newArticle.attr('data-category', this.category);
   $newArticle.find('.byline a').html(this.author);
   $newArticle.find('h1').html(this.title);
-  $newArticle.find('article-body').html(this.body);
+  $newArticle.find('.article-body').html(this.body);
   //Publication date to show on hover
   $newArticle.find('time[pubdate]').attr('datatime', this.publishedOn);
   //Display date as relative number of 'days ago'
