@@ -17,6 +17,7 @@
 }
 
 .top-nav ul {
+  display: none;
   padding: 0;
   list-style: none;
   clear: both;
