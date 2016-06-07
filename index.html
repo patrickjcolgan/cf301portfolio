@@ -12,25 +12,51 @@
     <h1>301 Portfolio</h1>
     <h3>Hover below to learn more</h3>
     </header>
-    <nav>
+    <nav class="top-nav">
       <ul>
-        <li><span class='tab' data-content=''></span></li>
-        <li><span class='tab' data-content=''></span></li>
-        <li><span class='tab' data-content=''></span></li>
+        <li class="tab" data-content="articles"><a href="#"> Home</a></li>
+        <li class="tab" data-content="about"><a href="#"> About</a></li>
+        <li class='icon-twitter3'><a href="http://twitter.com" target="_blank"> Twitter</a></li>
+        <li class='icon-github'><a href="http://github.com" target="_blank"> GitHub</a></li>
       </ul>
    </nav>
     <main>
+      <section id="dropDown" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
       <section id='articles'>
         <article class='template' data-category='test'>
           <header>
             <h1>Title</h1>
             <div class="byline">
               By <address><a href=''>Author Name</a></address>
+              <!-- <span data-group='category'>Category</span> -->
               published <time pubdate datetime="2016-06-01">Insert Published Time</time>
             </div>
           </header>
           <section class='article-body'></section>
+          <button href="#" class="more"type="button" name="button">More</button>
         </article>
+      </section>
+      <section id="about" class="tab-about">
+        <header>
+          Welcome to my cf301 Porfolio
+        </header>
+        <section>
+          <h1>Topics I'll Cover:</h1>
+          <ul>
+            <li>Coding Related Projects</li>
+            <li>Places I've Traveled</li>
+            <li>Financial Posts</li>
+          </ul>
+        </section>
       </section>
     </main>
     <footer>
@@ -43,5 +69,6 @@
     </footer>
     <script type="text/javascript" src="js/blogArticles.js"></script>
     <script type="text/javascript" src="js/article.js"></script>
+    <script type="text/javascript" src="js/articleView.js"></script>
   </body>
 </html>
