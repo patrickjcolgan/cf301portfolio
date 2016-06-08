@@ -41,6 +41,19 @@ articleView.manageMainNav = function() {
   $('.top-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
 };
 
-articleView.populateFilters();
-articleView.manageCategoryFilter();
-articleView.manageMainNav();
+articleView.setTeasers = function() {
+  $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+
+  $('#articles').on('click', 'a.more', function(e) {
+    e.preventDefault();
+    $(this).parent().find('*').fadeIn();
+    $(this).hide();
+  });
+};
+
+$(document).ready(function() {
+  articleView.populateFilters();
+  articleView.manageCategoryFilter();
+  articleView.manageMainNav();
+  articleView.setTeasers();
+});

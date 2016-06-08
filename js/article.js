@@ -19,7 +19,7 @@ Article.prototype.toHtml = function() {
   //Publication date to show on hover
   $newArticle.find('time[pubdate]').attr('datatime', this.publishedOn);
   //Display date as relative number of 'days ago'
-  $newArticle.find('time').html('about' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + 'days ago');
+  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 
   $newArticle.append('<hr>');
 
