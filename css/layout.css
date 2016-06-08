@@ -1,3 +1,42 @@
 h1 {
   font-size: 1.5em;
 }
+
+.top-nav ul {
+  /*display: none;*/
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+#category-filter {
+  width: 100%;
+  margin-left: 1em;
+  margin-right: 1em;
+  /*margin: auto;*/
+}
+
+#filters {
+  list-style-type: none;
+  width: 100%;
+  padding-top: 4em;
+}
+
+@media only screen and (min-width: 640px) {
+  .top-nav ul {
+    margin: 0 auto;
+  }
+  .header {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+ #filters select {
+   width: 15em;
+   margin: .2em .2em;
+ }
+
+ #filters li {
+   width: 20em;
+   display: inline;
+ }
+}

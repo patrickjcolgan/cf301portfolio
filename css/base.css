@@ -1,18 +1,49 @@
 body {
-  background-color: #DDDDDD;
+  background: linear-gradient(to bottom right, #6F8079, #fff);
   font-size: 100%;
   font-family: 'Lato', sans-serif;
+  max-width: 1300px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0 auto;
+}
+
+.header {
+  text-shadow: #CCC 1px 0 10px;
 }
 
 p {
   font-size: 1em;
-  /*font-family: 'Lato', sans-serif;*/
 }
 
 address {
   display: inline;
 }
 
+img {
+  width: 100%;
+}
+
+hr {
+  margin: 1em;
+  width: 80%;
+}
+/****************** LINKS *******************/
+a:link, :visited {
+  text-decoration: none;
+  color: #0D1602;
+}
+ .template {
+   display: none;
+ }
+
+/*a:visited {
+  color: blue;
+}*/
+a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+/****************** FOOTER ICONS *******************/
 .footer_icon {
   max-width: 32px;
   max-height: 32px;
