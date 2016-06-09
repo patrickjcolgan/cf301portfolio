@@ -37,11 +37,13 @@
           </ul>
         </div>
         <script id="blog-template" type="text/x-handlebars-template">
-          <h1>{{title}}</h1>
-          By <address>{{author}}</address>
-          <section>{{publishedOn}}</section>
-          <section>{{{body}}}</section>
-          <a href="#" class="read-on">Read on &rarr;</a>
+          <article data-category="{{category}}">
+            <h1>{{title}}</h1>
+            By <address>{{author}}</address>
+            <section>{{publishedOn}}</section>
+            <section>{{{body}}}</section>
+            <a href="#" class="read-on">Read on &rarr;</a>
+          </article>
         </script>
       <section id='articles'>
           <section class='article-body'></section>
