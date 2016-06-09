@@ -36,21 +36,17 @@
             </li>
           </ul>
         </div>
+        <script id="blog-template" type="text/x-handlebars-template">
+          <article data-category="{{category}}">
+            <h1>{{title}}</h1>
+            By <address>{{author}}</address>
+            <section>{{publishedOn}}</section>
+            <section>{{{body}}}</section>
+            <a href="#" class="read-on">Read on &rarr;</a>
+          </article>
+        </script>
       <section id='articles'>
-        <article class='template' data-category='test'>
-          <header>
-            <h1>Title</h1>
-            <div class="byline">
-              By <address><a href=''>Author Name</a></address><br>
-              <!-- <span data-group='category'>Category</span> -->
-              published <time pubdate datetime="2016-06-01">Insert Published Time</time>
-            </div>
-          </header>
           <section class='article-body'></section>
-          <a href="#" class="more">More &rarr;</a>
-          <!-- <a href="#" class="more" type="button" name="button"><button>More</button></a> -->
-          <!-- <button href="#" class="more" type="button" name="button">More</button> -->
-        </article>
       </section>
       <section id="about" class="tab-about">
         <header>
@@ -74,6 +70,7 @@
         <a class='footer_icon' href="https://www.facebook.com/patrick.lapaige.5"><img class='footer_icon' src="img/facebook-icon.png" alt="facebook" /></a>
       </section>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script type="text/javascript" src="js/blogArticles.js"></script>
     <script type="text/javascript" src="js/article.js"></script>
     <script type="text/javascript" src="js/articleView.js"></script>
