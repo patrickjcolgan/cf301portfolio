@@ -4,9 +4,7 @@ articleView.populateFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       var value = $(this).attr('data-category');
-      console.log(value);
       var optionTag = '<option value="' + value + '">' + value + '</option>';
-      console.log(optionTag);
       $('#category-filter').append(optionTag);
     }
   });
@@ -51,9 +49,16 @@ articleView.setTeasers = function() {
   });
 };
 
+articleView.hamburgerToggle = function() {
+  $('.icon-menu').on('click', function() {
+    $('nav ul').toggle();
+  });
+};
+
 $(document).ready(function() {
   articleView.populateFilters();
   articleView.manageCategoryFilter();
   articleView.manageMainNav();
   articleView.setTeasers();
+  articleView.hamburgerToggle();
 });

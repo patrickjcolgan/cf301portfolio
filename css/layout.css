@@ -3,17 +3,16 @@ h1 {
 }
 
 .top-nav ul {
-  /*display: none;*/
   padding: 0;
   list-style: none;
-  clear: both;
+  /*clear: both;*/
 }
 
 #category-filter {
   width: 35%;
   margin-left: 1em;
   margin-right: 1em;
-  /*margin: auto;*/
+  min-width: 12em; /*Keep filter long enough to read the words inside them on narrow mobile */
 }
 
 #filters {
