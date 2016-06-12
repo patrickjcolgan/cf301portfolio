@@ -5,7 +5,9 @@ articleView.populateFilters = function() {
     if (!$(this).hasClass('template')) {
       var value = $(this).attr('data-category');
       var optionTag = '<option value="' + value + '">' + value + '</option>';
+      if ($('#category-filter option[value="' + value + '"]').length === 0) {
       $('#category-filter').append(optionTag);
+      }
     }
   });
 };
@@ -40,7 +42,7 @@ articleView.manageMainNav = function() {
 };
 
 articleView.setTeasers = function() {
-  $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+  $('.teaser *:nth-of-type(n+3)').hide(); // Hide elements beyond the first 2 in any artcile body.
 
   $('#articles').on('click', 'a.read-on', function(e) {
     e.preventDefault();

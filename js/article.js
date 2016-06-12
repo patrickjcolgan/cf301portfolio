@@ -18,7 +18,7 @@ Article.prototype.toHtml = function() {
 };
 
 articleData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - new Date(a.publishedOn);
+  return (new Date(a.publishedOn)) - new Date(b.publishedOn);
 });
 
 articleData.forEach(function(element) {
