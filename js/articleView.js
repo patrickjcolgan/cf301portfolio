@@ -5,7 +5,9 @@ articleView.populateFilters = function() {
     if (!$(this).hasClass('template')) {
       var value = $(this).attr('data-category');
       var optionTag = '<option value="' + value + '">' + value + '</option>';
+      if ($('#category-filter option[value="' + value + '"]').length === 0) {
       $('#category-filter').append(optionTag);
+      }
     }
   });
 };
