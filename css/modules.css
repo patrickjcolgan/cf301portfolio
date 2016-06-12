@@ -12,6 +12,11 @@
   float: right;
 }
 
+/* this targets the pseudo class of the icon font to give space betweeen it and the link*/
+:before {
+  margin-right: .5em;
+}
+
 .top-nav {
   padding: 0.1em;
 }
