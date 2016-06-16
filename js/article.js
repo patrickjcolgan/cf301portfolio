@@ -17,14 +17,26 @@ Article.prototype.toHtml = function() {
   return renderTemplate(this);
 };
 
-articleData.sort(function(a,b) {
-  return (new Date(a.publishedOn)) - new Date(b.publishedOn);
-});
+Article.loadAll = function() {
+  articleData.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - new Date(a.publishedOn);
+  });
 
-articleData.forEach(function(element) {
-  articles.push(new Article(element));
-});
+  articleData.forEach(function(element) {
+    articles.push(new Article(element));
+  });
+  articles.forEach(function(a) {
+    $('#articles').append(a.toHtml());
+  });
+};
 
-articles.forEach(function(a) {
-  $('#articles').append(a.toHtml());
-});
+
+Article.fetchAll = function() {
+  if (localStorage.articleData) {
+    Article.loadAll(JSON.parse(localStorage.articleData));
+  } else {
+    var cache = JSON.stringify(articleData);
+    localStorage.setItem('articleData', cache);
+    Article.loadAll(cache);
+  }
+};

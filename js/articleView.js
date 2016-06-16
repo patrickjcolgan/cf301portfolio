@@ -63,4 +63,5 @@ $(document).ready(function() {
   articleView.manageMainNav();
   articleView.setTeasers();
   articleView.hamburgerToggle();
+  Article.fetchAll();
 });
