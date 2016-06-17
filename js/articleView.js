@@ -36,6 +36,7 @@ articleView.manageMainNav = function() {
   $('.top-nav').on('click','.tab:eq(1)', function(){
     $('#about').fadeIn(1000);
     $('#articles').hide();
+    $('#category-filter').hide();
   });
 
   $('.top-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
@@ -58,10 +59,10 @@ articleView.hamburgerToggle = function() {
 };
 
 $(document).ready(function() {
+  Article.fetchAll();
   articleView.populateFilters();
   articleView.manageCategoryFilter();
   articleView.manageMainNav();
   articleView.setTeasers();
   articleView.hamburgerToggle();
-  Article.fetchAll();
 });
