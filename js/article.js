@@ -1,5 +1,3 @@
-var articles = [];
-
 function Article(options) {
   this.title = options.title;
   this.category = options.category;
@@ -9,6 +7,8 @@ function Article(options) {
   this.body = options.body;
 };
 
+Article.all = [];
+
 Article.prototype.toHtml = function() {
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
   this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
@@ -17,26 +17,28 @@ Article.prototype.toHtml = function() {
   return renderTemplate(this);
 };
 
-Article.loadAll = function() {
-  articleData.sort(function(a,b) {
+Article.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
     return (new Date(b.publishedOn)) - new Date(a.publishedOn);
   });
 
-  articleData.forEach(function(element) {
-    articles.push(new Article(element));
-  });
-  articles.forEach(function(a) {
-    $('#articles').append(a.toHtml());
+  rawData.forEach(function(element) {
+    Article.all.push(new Article(element));
   });
 };
 
 
 Article.fetchAll = function() {
-  if (localStorage.articleData) {
-    Article.loadAll(JSON.parse(localStorage.articleData));
+  if (localStorage.rawData) {
+    console.log('localStorage exists');
+    Article.loadAll(JSON.parse(localStorage.rawData));
+    articleView.initIndexPage();
   } else {
-    var cache = JSON.stringify(articleData);
-    localStorage.setItem('articleData', cache);
-    Article.loadAll(cache);
+    $.getJSON('/data/blogArticles.json', function(rawData) {
+      Article.loadAll(rawData);
+      localStorage.setItem('rawData', JSON.stringify(rawData));
+      articleView.initIndexPage();
+      console.log('no local storage. getJSON');
+    });
   }
 };
