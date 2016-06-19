@@ -1,0 +1,57 @@
+[
+  {
+    "countryName": "Taiwan",
+    "locations": "Taipei, Taichung, Kaohsiung",
+    "date": "2007",
+    "purpose": "work"
+  },
+
+  {
+    "countryName": "Korea",
+    "locations": "Seoul",
+    "date": "2008, 2010",
+    "purpose": "work"
+  },
+
+  {
+    "countryName": "China",
+    "locations": "Beijing",
+    "date": "2010",
+    "purpose": "work"
+  },
+
+  {
+    "countryName": "Vietnam",
+    "locations": "Hanoi, Saigon",
+    "date": "2009",
+    "purpose": "work"
+  },
+
+  {
+    "countryName": "England",
+    "locations": "London",
+    "date": "2008",
+    "purpose": "vacation"
+  },
+
+  {
+    "countryName": "Czech Republic",
+    "locations": "Prague",
+    "date": "2008",
+    "purpose": "vacation"
+  },
+
+  {
+    "countryName": "Spain",
+    "locations": "Madrid, Alcover, Barcelona",
+    "date": "2010",
+    "purpose": "vacation"
+  },
+
+  {
+    "countryName": "France",
+    "locations": "Paris",
+    "date": "2010",
+    "purpose": "vacation"
+  },
+]
