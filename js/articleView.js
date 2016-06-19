@@ -74,9 +74,11 @@
   };
 
   travelView.initTravelInfo = function() {
-    Travel.all.forEach(function(a) {
-      $('mapTravel').append(a.toHtml());
+    Travels.all.forEach(function(a) {
+      $('#mapTravel').append(a.toHtml());
     });
   };
+
   module.articleView = articleView;
+  module.travelView = travelView;
 })(window);

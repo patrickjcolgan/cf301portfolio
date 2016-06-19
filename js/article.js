@@ -16,7 +16,6 @@
   };
 
   Travels.showAll = function(data) {
-    console.log(data);
     data.forEach(function(ele) {
       Travels.all.push(new Travels(ele));
     });
@@ -25,12 +24,13 @@
   Travels.getAll = function() {
     if (localStorage.data) {
       Travels.showAll(JSON.parse(localStorage.data));
-      articleView.initIndexPage();
+      travelView.initTravelInfo();
     } else {
       $.getJSON('/data/travel.json', function(data) {
         Travels.showAll(data);
+        console.log(data);
         localStorage.setItem('data', JSON.stringify(data));
-        articleView.initIndexPage();
+        travelView.initTravelInfo();
       });
     }
   };
