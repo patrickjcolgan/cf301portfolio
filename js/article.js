@@ -1,5 +1,40 @@
 (function (module) {
 
+  function Travels(opts) {
+    this.countryName = opts.countryName;
+    this.locations = opts.locations;
+    this.date = opts.date;
+    this.purpose = opts.purpose;
+  };
+
+  Travels.all = [];
+
+  Travels.prototype.toHtml = function() {
+    var travelTemplate = $('#travel-template').html();
+    var renderTemplate = Handlebars.compile(travelTemplate);
+    return renderTemplate(this);
+  };
+
+  Travels.showAll = function(data) {
+    console.log(data);
+    data.forEach(function(ele) {
+      Travels.all.push(new Travels(ele));
+    });
+  };
+
+  Travels.getAll = function() {
+    if (localStorage.data) {
+      Travels.showAll(JSON.parse(localStorage.data));
+      articleView.initIndexPage();
+    } else {
+      $.getJSON('/data/travel.json', function(data) {
+        Travels.showAll(data);
+        localStorage.setItem('data', JSON.stringify(data));
+        articleView.initIndexPage();
+      });
+    }
+  };
+
   function Article(options) {
     this.title = options.title;
     this.category = options.category;
@@ -34,15 +69,14 @@
     if (localStorage.rawData) {
       Article.loadAll(JSON.parse(localStorage.rawData));
       articleView.initIndexPage();
-      // next();
     } else {
       $.getJSON('/data/blogArticles.json', function(rawData) {
         Article.loadAll(rawData);
         localStorage.setItem('rawData', JSON.stringify(rawData));
         articleView.initIndexPage();
-        // next();
       });
     }
   };
   module.Article = Article;
+  module.Travels = Travels;
 })(window);

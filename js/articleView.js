@@ -1,5 +1,6 @@
 (function (module) {
   var articleView = {};
+  var travelView = {};
 
   articleView.populateFilters = function() {
     $('article').each(function() {
@@ -70,6 +71,12 @@
     articleView.manageMainNav();
     articleView.setTeasers();
     articleView.hamburgerToggle();
+  };
+
+  travelView.initTravelInfo = function() {
+    Travel.all.forEach(function(a) {
+      $('mapTravel').append(a.toHtml());
+    });
   };
   module.articleView = articleView;
 })(window);

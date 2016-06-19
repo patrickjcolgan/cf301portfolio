@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="css/base.css" charset="utf-8">
     <link rel="stylesheet" href="css/layout.css" charset="utf-8">
     <link rel="stylesheet" href="css/modules.css" charset="utf-8">
+    <script id="blog-template" type="text/x-handlebars-template">
+      <article class="teaser" data-category="{{category}}">
+        <h1>{{title}}</h1>
+        By <address>{{author}}</address>
+        <section>{{publishedOn}}</section>
+        <section class='articleImage'>{{{image}}}</section>
+        <section>{{{body}}}</section>
+        <a href="#" class="read-on">Read More &rarr;</a>
+        <hr />
+      </article>
+    </script>
+    <script id="travel-template" type="text/x-handlebars-template">
+      <h1>{{countryName}}</h1>
+      <section>{{locations}}</section>
+      <section>{{date}}</section>
+      <section>{{purpose}}</section>
+    </script>
   </head>
   <body>
     <header class="header">
@@ -36,19 +53,11 @@
             </li>
           </ul>
         </div>
-        <script id="blog-template" type="text/x-handlebars-template">
-          <article class="teaser" data-category="{{category}}">
-            <h1>{{title}}</h1>
-            By <address>{{author}}</address>
-            <section>{{publishedOn}}</section>
-            <section class='articleImage'>{{{image}}}</section>
-            <section>{{{body}}}</section>
-            <a href="#" class="read-on">Read More &rarr;</a>
-            <hr />
-          </article>
-        </script>
       <section id='articles'>
           <!-- <section class='article-body'></section> -->
+      </section>
+      <section id='mapTravel'>
+
       </section>
       <section id="about" class="tab-about">
         <header>
@@ -78,6 +87,7 @@
     <script type="text/javascript" src="js/articleView.js"></script>
     <script type="text/javascript">
       Article.fetchAll();
+      Travels.getAll();
     </script>
   </body>
 </html>
