@@ -1,0 +1,57 @@
+[
+  {
+    "countryName": "Taiwan",
+    "locations": "<h3>Locations visited: <span>Taipei, Taichung, Kaohsiung</span></h3>",
+    "date": "2007",
+    "purpose": "work"
+  },
+
+  {
+    "countryName": "Korea",
+    "locations": "<h3>Locations visited: <span>Seoul</span></h3>",
+    "date": "2008, 2010",
+    "purpose": "work"
+  },
+
+  {
+    "countryName": "China",
+    "locations": "<h3>Locations visited: <span>Beijing</span></h3>",
+    "date": "2010",
+    "purpose": "work"
+  },
+
+  {
+    "countryName": "Vietnam",
+    "locations": "<h3>Locations visited: <span>Hanoi, Saigon</span></h3>",
+    "date": "2009",
+    "purpose": "work"
+  },
+
+  {
+    "countryName": "England",
+    "locations": "<h3>Locations visited: <span>London</span></h3>",
+    "date": "2008",
+    "purpose": "vacation"
+  },
+
+  {
+    "countryName": "Czech Republic",
+    "locations": "<h3>Locations visited: <span>Prague</span></h3>",
+    "date": "2008",
+    "purpose": "vacation"
+  },
+
+  {
+    "countryName": "Spain",
+    "locations": "<h3>Locations visited: <span>Madrid, Alcover, Barcelona</span></h3>",
+    "date": "2010",
+    "purpose": "vacation"
+  },
+
+  {
+    "countryName": "France",
+    "locations": "<h3>Locations visited: <span>Paris</span></h3>",
+    "date": "2010",
+    "purpose": "vacation"
+  }
+]
