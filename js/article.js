@@ -8,6 +8,7 @@
   };
 
   Travels.all = [];
+  Travels.less = [];
 
   Travels.prototype.toHtml = function() {
     var travelTemplate = $('#travel-template').html();
@@ -15,19 +16,36 @@
     return renderTemplate(this);
   };
 
-  Travels.showAll = function(data) {
+  Travels.build = function(data) {
     data.forEach(function(ele) {
       Travels.all.push(new Travels(ele));
     });
   };
 
+  Travels.render = function(arr) {
+    console.log(arr);
+    arr.forEach(function(a) {
+      $('#mapTravel').append(a.toHtml());
+    });
+  };
+
+  Travels.lessData = function() {
+    Travels.less = Travels.all.reduce(function(start, ele) {
+      if (ele.purpose === "vacation") {
+        start.push(new Travels(ele));
+      }
+      return start;
+    }, []);
+  };
+
+
   Travels.getAll = function() {
     if (localStorage.data) {
-      Travels.showAll(JSON.parse(localStorage.data));
+      Travels.build(JSON.parse(localStorage.data));
       travelView.initTravelInfo();
     } else {
       $.getJSON('/data/travel.json', function(data) {
-        Travels.showAll(data);
+        Travels.build(data);
         console.log(data);
         localStorage.setItem('data', JSON.stringify(data));
         travelView.initTravelInfo();

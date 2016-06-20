@@ -74,9 +74,9 @@
   };
 
   travelView.initTravelInfo = function() {
-    Travels.all.forEach(function(a) {
-      $('#mapTravel').append(a.toHtml());
-    });
+    Travels.lessData();
+    Travels.render(Travels.less);
+    // Travels.render(Travels.all);
   };
 
   module.articleView = articleView;
