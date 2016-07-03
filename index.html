@@ -53,7 +53,7 @@
             </li>
           </ul>
         </div>
-      <section id='articles'>
+      <section id='articles' class="tab-content">
           <!-- <section class='article-body'></section> -->
       </section>
       <section id='mapTravel'>
@@ -83,11 +83,15 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <!-- <script type="text/javascript" src="js/blogArticles.js"></script> -->
+    <script type="text/javascript" src="vendor/scripts/page.js"></script>
     <script type="text/javascript" src="js/article.js"></script>
     <script type="text/javascript" src="js/articleView.js"></script>
-    <script type="text/javascript">
-      Article.fetchAll();
-      Travels.getAll();
-    </script>
+    <script type="text/javascript" src="js/articleController.js"></script>
+    <script type="text/javascript" src="js/aboutController.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <!-- <script type="text/javascript">
+      // Article.fetchAll();
+      // Travels.getAll();//no longer want this. was to fullfil previous assignment
+    </script> -->
   </body>
 </html>
