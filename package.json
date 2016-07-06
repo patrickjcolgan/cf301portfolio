@@ -1,0 +1,23 @@
+{
+  "name": "cf301portfolio",
+  "version": "1.0.0",
+  "description": "## Branch: Class01 + semantic HTML. Each article in its own <section> + Footer links to linkedin, github, instagram, facebook   + add twitter? + uses a repeatable template, so I can reuse it, and abstract out the details for individual projects",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickjcolgan/cf301portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickjcolgan/cf301portfolio/issues"
+  },
+  "homepage": "https://github.com/patrickjcolgan/cf301portfolio#readme"
+}
