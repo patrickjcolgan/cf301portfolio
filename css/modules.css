@@ -52,4 +52,8 @@
     padding-right: 7%;
     float: left;
   }
+  .welcome {
+    clear:both;
+    padding-top: 1%;
+  }
 }
