@@ -28,6 +28,19 @@
       <section>{{date}}</section>
       <section>{{purpose}}</section>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        // LOOK: A Handlebars `if` block!
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
   </head>
   <body>
     <header class="header">
@@ -53,18 +66,17 @@
             </li>
           </ul>
         </div>
+      </section>
       <section id='articles' class="tab-content">
           <!-- <section class='article-body'></section> -->
       </section>
-      <section id='mapTravel'>
-
-      </section>
+      <section id='mapTravel'></section>
       <section id="about" class="tab-about">
-        <header>
+        <h1 class="welcome">
           Welcome to my cf301 Porfolio
-        </header>
-        <section>
-          <h1>Topics I'll Cover:</h1>
+        </h1>
+        <section >
+          <h3 class="welcome">Here are the links to my repo via an API:</h3>
           <ul>
             <li>Coding Related Projects</li>
             <li>Places I've Traveled</li>
@@ -83,15 +95,15 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <!-- <script type="text/javascript" src="js/blogArticles.js"></script> -->
+
     <script type="text/javascript" src="vendor/scripts/page.js"></script>
+    <script type="text/javascript" src="js/githubToken.js"></script>
     <script type="text/javascript" src="js/article.js"></script>
     <script type="text/javascript" src="js/articleView.js"></script>
     <script type="text/javascript" src="js/articleController.js"></script>
     <script type="text/javascript" src="js/aboutController.js"></script>
+    <script type="text/javascript" src="js/repoView.js"></script>
+    <script type="text/javascript" src="js/repo.js"></script>
     <script type="text/javascript" src="js/routes.js"></script>
-    <!-- <script type="text/javascript">
-      // Article.fetchAll();
-      // Travels.getAll();//no longer want this. was to fullfil previous assignment
-    </script> -->
   </body>
 </html>

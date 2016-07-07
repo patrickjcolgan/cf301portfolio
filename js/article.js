@@ -31,7 +31,7 @@
 
   Travels.lessData = function() {
     Travels.less = Travels.all.reduce(function(start, ele) {
-      if (ele.purpose === "vacation") {
+      if (ele.purpose === 'vacation') {
         start.push(new Travels(ele));
       }
       return start;

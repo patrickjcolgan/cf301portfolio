@@ -65,6 +65,10 @@
     Article.all.forEach(function(a){
       $('#articles').append(a.toHtml());
     });
+  // articleView.initIndexPage = function() {
+  //   Article.all.forEach(function(a){
+  //     $('#articles').append(render(a));
+  //   });
 
     articleView.populateFilters();
     articleView.manageCategoryFilter();
